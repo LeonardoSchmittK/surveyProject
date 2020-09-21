@@ -1,6 +1,6 @@
-# Filter, Map, Reduce and ForEach 
+# Cyberpunk 2077 countdown
 
-### JavaScript 
+### JavaScript, CSS3 and HTML5
 
-- [x]  Learn something more.
-- [x]  Understand the main concepts of these methods.
+- [x]  Make a count down and understand it
+- [x]  Use blend mode in css
