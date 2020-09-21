@@ -1,0 +1,51 @@
+* {
+  margin: none;
+  padding: none;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family:cyber;
+  src: url('./Cyberpunk.otf');
+}
+
+::selection{
+  background:#defe47;
+}
+
+body{
+ background:#defe47;
+}
+
+.container{
+   max-width: 1400px;
+   height: auto;
+   
+   padding: 1rem;
+   margin: auto;
+   
+} 
+
+.countDownTitle{
+   text-align: center;
+   font-size:10rem;
+   font-family: cyber;
+   text-shadow:1px 3px 13px #688cdf;
+   letter-spacing: 20px;
+}
+
+.countDown{
+ text-align: center;
+ font-size:4rem;
+ font-family: sans-serif;
+ text-shadow:1px 3px 13px #688cdf;
+ letter-spacing: 30px;
+} 
+
+img{
+ width: 600px;
+ height: 900px;
+ position: absolute;
+ bottom:0; 
+ mix-blend-mode: darken;
+}
