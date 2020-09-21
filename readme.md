@@ -4,3 +4,6 @@
 
 - [x]  Make a count down and understand it
 - [x]  Use blend mode in css
+
+
+![screenshot-project](./images/screenshot.png) 
