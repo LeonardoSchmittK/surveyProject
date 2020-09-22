@@ -199,3 +199,23 @@ hr{
   opacity: 0;
  }
 }
+
+
+ @media only screen and (max-width:400px){
+    #title{
+      font-size:3em;
+      line-height: 40px;
+      margin-bottom:90px;
+    }
+    #subtitle{
+      letter-spacing: 1px;
+    }
+    #image{
+      width: 200px;
+      margin: auto;
+    }
+    #img-caption{
+      font-size:20px;
+      margin-left:66px;      
+    }
+} 
