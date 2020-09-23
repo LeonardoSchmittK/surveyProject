@@ -1,3 +1,141 @@
+body {
+  background: url("/src/images/screenshot.png") fixed center no-repeat;
+}
 
+.container-sm {
+  background-color: transparent;
+}
 
+.container-sm .header {
+  background: #fafafa;
+  margin: auto;
+  -webkit-box-shadow: inset -1px 10px 20px #b8b4b4, inset 1px 10px 20px #b8b4b4;
+          box-shadow: inset -1px 10px 20px #b8b4b4, inset 1px 10px 20px #b8b4b4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-sm .header .title {
+  line-height: 40px;
+  letter-spacing: -2px;
+  font-size: 3em;
+  color: #5555b9;
+  font-family: "Kanit", sans serif;
+  text-shadow: 10px 0px 40px rgba(0, 0, 0, 0.329);
+  text-transform: uppercase;
+}
+
+.container-sm .header .subtitle {
+  letter-spacing: 2px;
+  line-height: 1em;
+  font-size: 2em;
+  color: #585861;
+  font-family: "Montserrat", sans serif;
+}
+
+.container-sm .header .code-icon {
+  text-align: center;
+  margin: auto;
+  color: #5555b9;
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.container-sm .survey-body {
+  background-color: rgba(255, 255, 255, 0.863);
+}
+
+.container-sm form .titleForm {
+  font-size: 3em;
+  color: #5555b9;
+  font-family: "Kanit", sans serif;
+  text-shadow: 10px 0px 40px rgba(0, 0, 0, 0.329);
+  text-transform: uppercase;
+}
+
+.container-sm form input, .container-sm form select, .container-sm form textarea {
+  border-radius: 10px;
+  padding-left: 5px;
+  border: 0;
+  outline: #5555b9;
+  width: 100%;
+  -webkit-box-shadow: inset 1px 1px 10px rgba(128, 128, 128, 0.555);
+          box-shadow: inset 1px 1px 10px rgba(128, 128, 128, 0.555);
+}
+
+.container-sm form label {
+  font-size: 1.2em;
+  font-family: "Mukta", sans serif;
+}
+
+.container-sm form textarea {
+  padding: 10px;
+  text-align: center;
+}
+
+.container-sm form label {
+  color: #5555b9;
+  font-weight: 600;
+}
+
+.container-sm form button[type=submit] {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #585861;
+  font-family: "Montserrat", sans serif;
+  background-color: #5555b9;
+  -webkit-box-shadow: inset 1px 10px 10px #8888ce;
+          box-shadow: inset 1px 10px 10px #8888ce;
+  color: white;
+  border-radius: 10px;
+}
+
+.container-sm form button[type=submit] i {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.container-sm form .checkBoxArea {
+  width: 110px;
+}
+
+.container-sm form .checkBoxArea input[type=checkbox] {
+  width: 30px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.container-sm form .checkBoxArea #backEnd {
+  margin-left: -0px;
+}
+
+.container-sm form .checkBoxArea #frontEnd {
+  margin-left: -4px;
+}
+
+.container-sm form .checkBoxArea #fullStack {
+  margin-left: 2px;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    background: transparent;
+  }
+}
 /*# sourceMappingURL=style.css.map */

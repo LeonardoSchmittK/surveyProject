@@ -1,0 +1,117 @@
+@import "./animations";
+@import "./functions";
+@import "./variables";
+
+body {
+  
+  background: url('/src/images/screenshot.png') fixed center no-repeat;
+}
+
+.container-sm {
+  background-color: transparent;
+  .header {
+    background:$white;
+    margin: auto;
+    box-shadow: inset -1px 10px 20px rgb(184, 180, 180), inset 1px 10px 20px rgb(184, 180, 180);
+    
+    @include flex;
+    .title{
+     line-height: 40px;
+     letter-spacing: -2px;
+     @include font-size('title');
+      
+    }
+
+     .subtitle{
+       letter-spacing: 2px;
+       line-height: 1em;
+      @include font-size('subtitle');
+     }
+
+     .code-icon{
+       text-align: center;
+       margin: auto;
+       color:$mainFontColor;
+       font-size:2em;
+       margin-top: 20px;
+      }
+  }
+
+  .survey-body {
+    background-color: rgba(255, 255, 255, 0.863);
+  }
+
+  form{
+
+   .titleForm{
+    @include font-size(title);
+   }
+   input,select,textarea{
+    border-radius: 10px;
+    padding-left: 5px;
+    border:0;
+    outline:$mainFontColor;
+    width: 100%;
+    box-shadow: inset 1px 1px 10px rgba(128, 128, 128, 0.555);
+    
+   }
+   label{
+    @include font-size(label);
+   }
+   textarea{
+    padding: 10px;
+    text-align: center;
+   }
+   label{
+    color:$mainFontColor;
+    font-weight: 600;
+   }
+  
+
+  button[type=submit]{
+    width: 100%;
+    border:none;
+    outline:none;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include font-size('subtitle');
+    background-color: $mainFontColor;
+    box-shadow: inset 1px 10px 10px lighten($mainFontColor,14%);
+    color:white;
+    border-radius:10px;
+      i{
+       font-size:20px;
+       vertical-align:middle ;
+      }
+  }
+  .checkBoxArea{
+    width: 110px;
+   input[type=checkbox]{
+   width: 30px;
+   box-shadow: none;
+  }
+  
+ 
+  #backEnd{
+   margin-left: -0px;
+  }
+  #frontEnd{
+   margin-left: -4px;
+  }
+  #fullStack{
+   margin-left:2px
+  }
+
+
+ }
+}
+}
+
+
+@media only screen and (min-width:800px){
+ 
+ body{background:transparent}
+
+ 
+}

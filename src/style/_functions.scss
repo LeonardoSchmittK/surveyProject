@@ -1,0 +1,26 @@
+@mixin font-size($val){
+  @if $val=='title'{
+    font-size: 3em;
+    color:$mainFontColor;
+   font-family: $mainFontFamily;
+   text-shadow: 10px 0px 40px rgba(0, 0, 0, 0.329);
+   text-transform: uppercase;
+  }
+  @else if($val=='subtitle'){
+   font-size: 2em;
+   color:$secondaryFontColor;
+   font-family: $secondaryFontFamily;
+  }
+  @else{
+   font-size: 1.2em;
+   font-family: $thirdFontFamily;
+  }
+}
+
+
+@mixin flex(){
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
