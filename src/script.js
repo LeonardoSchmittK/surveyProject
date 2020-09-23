@@ -1,4 +1,0 @@
-
-function verifyEmail(){
-   alert('thanks')
-}
