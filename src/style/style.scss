@@ -8,16 +8,19 @@ body {
 
 .container-sm {
   background-color: transparent;
+
   .header {
     background: $white;
     margin: auto;
-    box-shadow: inset -1px 10px 20px rgb(184, 180, 180),
-      inset 1px 10px 20px rgb(184, 180, 180);
+    box-shadow: inset -1px 10px 20px rgba(184, 180, 180, 0.356),
+      inset 1px 10px 20px rgba(184, 180, 180, 0.561);
 
     @include flex;
     .title {
       line-height: 40px;
       letter-spacing: -2px;
+      animation: popUpTitle 1s linear;
+
       @include font-size("title");
     }
 
@@ -38,122 +41,150 @@ body {
 
   .survey-body {
     background-color: rgba(255, 255, 255, 0.863);
-  }
-
-  form {
-    .titleForm {
-      @include font-size(title);
-    }
-    input,
-    select,
-    textarea {
-      border-radius: 10px;
-      padding-left: 5px;
-      border: 0;
-      outline: $mainFontColor;
-      width: 100%;
-      box-shadow: inset 1px 1px 10px rgba(128, 128, 128, 0.555);
-    }
-    label {
-      @include font-size(label);
-    }
-    textarea {
-      padding: 10px;
-      text-align: center;
-    }
-    label {
-      color: $mainFontColor;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    button[type="submit"] {
-      width: 100%;
-      border: none;
-      outline: none;
-      padding: 5px;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      @include font-size("subtitle");
-      background-color: $mainFontColor;
-      box-shadow: inset 1px 10px 10px lighten($mainFontColor, 14%);
-      color: white;
-      border-radius: 10px;
-      i {
-        font-size: 20px;
-        vertical-align: middle;
+    form {
+      .titleForm {
+        @include font-size(title);
       }
-    }
-    .checkBoxArea {
-      width: 110px;
-      input[type="checkbox"] {
-        width: 30px;
-        box-shadow: none;
+      .mainInfoBox {
+        width: 85%;
+      }
+      input,
+      select,
+      textarea {
+        border-radius: 10px;
+        padding-left: 5px;
+        border: 0;
+        outline: $mainFontColor;
+        width: 100%;
+        box-shadow: inset 1px 1px 10px rgba(128, 128, 128, 0.555);
+      }
+      label {
+        @include font-size(label);
+      }
+      textarea {
+        padding: 10px;
+        text-align: center;
+      }
+      label {
+        color: $mainFontColor;
+        font-weight: 600;
+        cursor: pointer;
       }
 
-      #backEnd {
-        margin-left: -0px;
+      button[type="submit"] {
+        width: 100%;
+        border: none;
+        outline: none;
+        user-select: none;
+        padding: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @include font-size("subtitle");
+        background-color: $mainFontColor;
+        box-shadow: inset 1px -6px 1px lighten($mainFontColor, 14%);
+        color: $white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transition: 0.1s linear;
+        &:hover {
+          transform: scale(1.01);
+          transition: 0.1s linear;
+        }
+        i {
+          font-size: 24px;
+          margin-right: 10px;
+        }
       }
-      #frontEnd {
-        margin-left: -4px;
-      }
-      #fullStack {
-        margin-left: 2px;
+      .checkBoxArea {
+        width: 110px;
+        input[type="checkbox"] {
+          width: 30px;
+          box-shadow: none;
+        }
+
+        #backEnd {
+          margin-left: -0px;
+        }
+        #frontEnd {
+          margin-left: -4px;
+        }
+        #fullStack {
+          margin-left: 2px;
+        }
       }
     }
-   
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 760px) {
   body {
     background: transparent;
-    font-size:25px;
+    font-size: 25px;
   }
   .container-sm {
-    box-shadow: inset 1px 1px 20px rgba(128, 128, 128, 0.424);
+    box-shadow: inset 1px 1px 20px rgba(231, 231, 231, 0.897);
 
     .header {
-      box-shadow: inset 1px 1px 5px rgba(128, 128, 128, 0.404);
-      background: white;
+      box-shadow: inset 1px 1px 5px rgba(162, 162, 163, 0.109);
+      background: $white;
+
+      .title {
+        margin-bottom: 20px;
+      }
+      .subtitle {
+        letter-spacing: 5px;
+      }
     }
 
     .survey-body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      padding: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       form {
-         .titleForm{
-           text-align: center;
-           margin-bottom: 50px;
-           border-bottom:1px solid rgba(214, 212, 212, 0.616)
-         }
-         .mainInfoBox{
-          width: 50%;
-         
-         }
-         .checkBoxArea{
-          width: 20%;
-          input{
-           width: 50px;
+        .titleForm {
+          text-align: center;
+          margin-bottom: 50px;
+          border-bottom: 1px solid #d6d4d49d;
+          color: lighten($mainFontColor, 5%);
+        }
+        .mainInfoBox {
+          width: 60%;
+        }
+
+        .checkBoxArea {
+          width: 25%;
+          input {
+            width: 50px;
           }
-         }
-        input,select{
-          color:grey;
+          #backEnd {
+            margin-left: 4px;
+          }
+          #frontEnd {
+            margin-left: -4px;
+          }
+          #fullStack {
+            margin-left: 4px;
+          }
+        }
+        input,
+        select {
+          color: grey;
           border-radius: 10px;
           padding-left: 5px;
           border: 0;
           outline: $mainFontColor;
           width: 100%;
-          box-shadow: inset 10px 10px 10px rgba(128, 128, 128, 0.226);
+          box-shadow: inset 10px 10px 10px rgba(128, 128, 128, 0.137);
         }
-       
       }
     }
   }
 }
 
-
-#thanks{
- @include font-size(title);
+#thanks {
+  @include font-size(title);
 }

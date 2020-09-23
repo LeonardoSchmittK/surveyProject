@@ -3,7 +3,7 @@
     font-size: 3em;
     color:$mainFontColor;
    font-family: $mainFontFamily;
-   text-shadow: 10px 0px 40px rgba(0, 0, 0, 0.329);
+   text-shadow: 10px 0px 40px rgba(0, 0, 0, 0.178);
    text-transform: uppercase;
   }
   @else if($val=='subtitle'){

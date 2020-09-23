@@ -1,3 +1,46 @@
+@-webkit-keyframes popUpTitle {
+  from {
+    -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+  }
+  50% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(10deg);
+            transform: rotateX(10deg);
+  }
+}
+
+@keyframes popUpTitle {
+  from {
+    -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+  }
+  50% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(10deg);
+            transform: rotateX(10deg);
+  }
+}
+
+input:focus {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+::-moz-selection {
+  color: #585861;
+}
+
+::selection {
+  color: #585861;
+}
+
 body {
   background: url("/src/images/screenshot.png") fixed center no-repeat;
 }
@@ -9,8 +52,8 @@ body {
 .container-sm .header {
   background: #fafafa;
   margin: auto;
-  -webkit-box-shadow: inset -1px 10px 20px #b8b4b4, inset 1px 10px 20px #b8b4b4;
-          box-shadow: inset -1px 10px 20px #b8b4b4, inset 1px 10px 20px #b8b4b4;
+  -webkit-box-shadow: inset -1px 10px 20px rgba(184, 180, 180, 0.356), inset 1px 10px 20px rgba(184, 180, 180, 0.561);
+          box-shadow: inset -1px 10px 20px rgba(184, 180, 180, 0.356), inset 1px 10px 20px rgba(184, 180, 180, 0.561);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,10 +72,12 @@ body {
 .container-sm .header .title {
   line-height: 40px;
   letter-spacing: -2px;
+  -webkit-animation: popUpTitle 1s linear;
+          animation: popUpTitle 1s linear;
   font-size: 3em;
   color: #5555b9;
   font-family: "Kanit", sans serif;
-  text-shadow: 10px 0px 40px rgba(0, 0, 0, 0.329);
+  text-shadow: 10px 0px 40px rgba(0, 0, 0, 0.178);
   text-transform: uppercase;
 }
 
@@ -56,17 +101,21 @@ body {
   background-color: rgba(255, 255, 255, 0.863);
 }
 
-.container-sm form .titleForm {
+.container-sm .survey-body form .titleForm {
   font-size: 3em;
   color: #5555b9;
   font-family: "Kanit", sans serif;
-  text-shadow: 10px 0px 40px rgba(0, 0, 0, 0.329);
+  text-shadow: 10px 0px 40px rgba(0, 0, 0, 0.178);
   text-transform: uppercase;
 }
 
-.container-sm form input,
-.container-sm form select,
-.container-sm form textarea {
+.container-sm .survey-body form .mainInfoBox {
+  width: 85%;
+}
+
+.container-sm .survey-body form input,
+.container-sm .survey-body form select,
+.container-sm .survey-body form textarea {
   border-radius: 10px;
   padding-left: 5px;
   border: 0;
@@ -76,26 +125,30 @@ body {
           box-shadow: inset 1px 1px 10px rgba(128, 128, 128, 0.555);
 }
 
-.container-sm form label {
+.container-sm .survey-body form label {
   font-size: 1.2em;
   font-family: "Mukta", sans serif;
 }
 
-.container-sm form textarea {
+.container-sm .survey-body form textarea {
   padding: 10px;
   text-align: center;
 }
 
-.container-sm form label {
+.container-sm .survey-body form label {
   color: #5555b9;
   font-weight: 600;
   cursor: pointer;
 }
 
-.container-sm form button[type="submit"] {
+.container-sm .survey-body form button[type="submit"] {
   width: 100%;
   border: none;
   outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   padding: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -103,54 +156,83 @@ body {
   color: #585861;
   font-family: "Montserrat", sans serif;
   background-color: #5555b9;
-  -webkit-box-shadow: inset 1px 10px 10px #8888ce;
-          box-shadow: inset 1px 10px 10px #8888ce;
-  color: white;
+  -webkit-box-shadow: inset 1px -6px 1px #8888ce;
+          box-shadow: inset 1px -6px 1px #8888ce;
+  color: #fafafa;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
 }
 
-.container-sm form button[type="submit"] i {
-  font-size: 20px;
-  vertical-align: middle;
+.container-sm .survey-body form button[type="submit"]:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
 }
 
-.container-sm form .checkBoxArea {
+.container-sm .survey-body form button[type="submit"] i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.container-sm .survey-body form .checkBoxArea {
   width: 110px;
 }
 
-.container-sm form .checkBoxArea input[type="checkbox"] {
+.container-sm .survey-body form .checkBoxArea input[type="checkbox"] {
   width: 30px;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.container-sm form .checkBoxArea #backEnd {
+.container-sm .survey-body form .checkBoxArea #backEnd {
   margin-left: -0px;
 }
 
-.container-sm form .checkBoxArea #frontEnd {
+.container-sm .survey-body form .checkBoxArea #frontEnd {
   margin-left: -4px;
 }
 
-.container-sm form .checkBoxArea #fullStack {
+.container-sm .survey-body form .checkBoxArea #fullStack {
   margin-left: 2px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 760px) {
   body {
     background: transparent;
     font-size: 25px;
   }
   .container-sm {
-    -webkit-box-shadow: inset 1px 1px 20px rgba(128, 128, 128, 0.424);
-            box-shadow: inset 1px 1px 20px rgba(128, 128, 128, 0.424);
+    -webkit-box-shadow: inset 1px 1px 20px rgba(231, 231, 231, 0.897);
+            box-shadow: inset 1px 1px 20px rgba(231, 231, 231, 0.897);
   }
   .container-sm .header {
-    -webkit-box-shadow: inset 1px 1px 5px rgba(128, 128, 128, 0.404);
-            box-shadow: inset 1px 1px 5px rgba(128, 128, 128, 0.404);
-    background: white;
+    -webkit-box-shadow: inset 1px 1px 5px rgba(162, 162, 163, 0.109);
+            box-shadow: inset 1px 1px 5px rgba(162, 162, 163, 0.109);
+    background: #fafafa;
+  }
+  .container-sm .header .title {
+    margin-bottom: 20px;
+  }
+  .container-sm .header .subtitle {
+    letter-spacing: 5px;
   }
   .container-sm .survey-body {
+    padding: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -164,26 +246,37 @@ body {
   .container-sm .survey-body form .titleForm {
     text-align: center;
     margin-bottom: 50px;
-    border-bottom: 1px solid rgba(214, 212, 212, 0.616);
+    border-bottom: 1px solid #d6d4d49d;
+    color: #6767c0;
   }
   .container-sm .survey-body form .mainInfoBox {
-    width: 50%;
+    width: 60%;
   }
   .container-sm .survey-body form .checkBoxArea {
-    width: 20%;
+    width: 25%;
   }
   .container-sm .survey-body form .checkBoxArea input {
     width: 50px;
   }
-  .container-sm .survey-body form input, .container-sm .survey-body form select {
+  .container-sm .survey-body form .checkBoxArea #backEnd {
+    margin-left: 4px;
+  }
+  .container-sm .survey-body form .checkBoxArea #frontEnd {
+    margin-left: -4px;
+  }
+  .container-sm .survey-body form .checkBoxArea #fullStack {
+    margin-left: 4px;
+  }
+  .container-sm .survey-body form input,
+  .container-sm .survey-body form select {
     color: grey;
     border-radius: 10px;
     padding-left: 5px;
     border: 0;
     outline: #5555b9;
     width: 100%;
-    -webkit-box-shadow: inset 10px 10px 10px rgba(128, 128, 128, 0.226);
-            box-shadow: inset 10px 10px 10px rgba(128, 128, 128, 0.226);
+    -webkit-box-shadow: inset 10px 10px 10px rgba(128, 128, 128, 0.137);
+            box-shadow: inset 10px 10px 10px rgba(128, 128, 128, 0.137);
   }
 }
 
@@ -191,7 +284,7 @@ body {
   font-size: 3em;
   color: #5555b9;
   font-family: "Kanit", sans serif;
-  text-shadow: 10px 0px 40px rgba(0, 0, 0, 0.329);
+  text-shadow: 10px 0px 40px rgba(0, 0, 0, 0.178);
   text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */

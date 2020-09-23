@@ -1,0 +1,21 @@
+@import "./variables";
+
+@keyframes popUpTitle {
+  from {
+    transform: rotateX(100deg);
+  }
+  50% {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(10deg);
+  }
+}
+
+input:focus {
+  transform: scale(1.02);
+}
+
+::selection {
+  color: $secondaryFontColor;
+}

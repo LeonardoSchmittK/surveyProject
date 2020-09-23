@@ -28,52 +28,50 @@
     <script src="/src/bootstrap/bootstrap.min.js"></script>
     <script src="/src/script.js"></script>
   </head>
-  <body>
+  <body onload="descEffectAppear()">
     <div class="container-sm p-4 mt-5 rounded-lg">
       <header class="header p-4 rounded">
         <h1 id="title" class="title text-center font-weight-bold">
           Hey, code addict!
         </h1>
-        <h2 id="description" class="subtitle text-center">
-          Please fill out for our survey
-        </h2>
+        <h2 id="description" class="subtitle text-center"></h2>
         <i class="code-icon fas fa-laptop-code"></i>
       </header>
 
       <div class="survey-body container-sm rounded shadow-lg mt-3 pt-3">
-       <form action='./salute.html' id="survey-form">
-        <h1 class='titleForm'>Survey</h1> 
-        <div class="mainInfoBox">
-        <label id="name-label" for="name"
-          >Name
-          <input
-            type="text"
-            class=""
-            name=""
-            id="name"
-            placeholder="example example"
-            required
-        /></label>
-        <label id="email-label" for="email"
-          >Email
-          <input
-            type="email"
-            name=""
-            id="email"
-            placeholder="example@gmail.com"
-            required
-        /></label>
-        <label id="number-label" for="number"
-          >Age
-          <input
-            type="number"
-            name=""
-            id="number"
-            max="100"
-            min="0"
-            placeholder="e.g 20"
-        /></label>
-        </div>
+        <form action="./salute.html" id="survey-form">
+          <h1 class="titleForm">Survey</h1>
+          <div class="mainInfoBox">
+            <label id="name-label" for="name"
+              >Name
+              <input
+                type="text"
+                class=""
+                name=""
+                id="name"
+                placeholder="example example"
+                required
+            /></label>
+            <label id="email-label" for="email"
+              >Email
+              <input
+                type="email"
+                name=""
+                id="email"
+                placeholder="example@gmail.com"
+                required
+            /></label>
+            <label id="number-label" for="number"
+              >Age
+              <input
+                type="number"
+                name=""
+                id="number"
+                max="100"
+                min="0"
+                placeholder="e.g 20"
+            /></label>
+          </div>
           <div class="checkBoxArea">
             <label for="frontEnd">
               Front-End
@@ -133,14 +131,18 @@
           </div>
           <div class="testimonialJob">
             <label for="satisfaction">
-           Satisfaction with job
-           <input type="range" name="" id="satisfaction"
-           value="50" required style='box-shadow: none;'>
-         
-          </label>
+              Satisfaction with job
+              <input
+                type="range"
+                name=""
+                id="satisfaction"
+                value="50"
+                required
+                style="box-shadow: none"
+              />
+            </label>
           </div>
-         
-        
+
           <textarea
             name=""
             id=""
