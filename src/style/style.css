@@ -42,7 +42,7 @@ input:focus {
 }
 
 body {
-  background: url("/src/images/screenshot.png") fixed center no-repeat;
+  background: url("/src/images/bgImage.png") fixed center;
 }
 
 .container-sm {
@@ -52,8 +52,8 @@ body {
 .container-sm .header {
   background: #fafafa;
   margin: auto;
-  -webkit-box-shadow: inset -1px 10px 20px rgba(184, 180, 180, 0.356), inset 1px 10px 20px rgba(184, 180, 180, 0.561);
-          box-shadow: inset -1px 10px 20px rgba(184, 180, 180, 0.356), inset 1px 10px 20px rgba(184, 180, 180, 0.561);
+  -webkit-box-shadow: inset -1px 10px 20px #b8b4b45b, inset 1px 10px 20px #b8b4b48f;
+          box-shadow: inset -1px 10px 20px #b8b4b45b, inset 1px 10px 20px #b8b4b48f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,7 +98,8 @@ body {
 }
 
 .container-sm .survey-body {
-  background-color: rgba(255, 255, 255, 0.863);
+  background-color: #fffffff6;
+  padding: 10px 10px 10px 15px;
 }
 
 .container-sm .survey-body form .titleForm {
@@ -121,8 +122,8 @@ body {
   border: 0;
   outline: #5555b9;
   width: 100%;
-  -webkit-box-shadow: inset 1px 1px 10px rgba(128, 128, 128, 0.555);
-          box-shadow: inset 1px 1px 10px rgba(128, 128, 128, 0.555);
+  -webkit-box-shadow: inset 1px 1px 10px #8080808e;
+          box-shadow: inset 1px 1px 10px #8080808e;
 }
 
 .container-sm .survey-body form label {
@@ -145,36 +146,34 @@ body {
   width: 100%;
   border: none;
   outline: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   padding: 5px;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 20px;
-  font-size: 2em;
-  color: #585861;
-  font-family: "Montserrat", sans serif;
   background-color: #5555b9;
   -webkit-box-shadow: inset 1px -6px 1px #8888ce;
           box-shadow: inset 1px -6px 1px #8888ce;
-  color: #fafafa;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
+  font-size: 2em;
+  color: #585861;
+  font-family: "Montserrat", sans serif;
+  color: #fafafa;
 }
 
 .container-sm .survey-body form button[type="submit"]:hover {
@@ -190,7 +189,7 @@ body {
 }
 
 .container-sm .survey-body form .checkBoxArea {
-  width: 110px;
+  width: 140px;
 }
 
 .container-sm .survey-body form .checkBoxArea input[type="checkbox"] {
@@ -214,15 +213,15 @@ body {
 @media only screen and (min-width: 760px) {
   body {
     background: transparent;
-    font-size: 25px;
+    font-size: 1.7em;
   }
   .container-sm {
-    -webkit-box-shadow: inset 1px 1px 20px rgba(231, 231, 231, 0.897);
-            box-shadow: inset 1px 1px 20px rgba(231, 231, 231, 0.897);
+    -webkit-box-shadow: inset 1px 1px 20px #fafafa;
+            box-shadow: inset 1px 1px 20px #fafafa;
   }
   .container-sm .header {
-    -webkit-box-shadow: inset 1px 1px 5px rgba(162, 162, 163, 0.109);
-            box-shadow: inset 1px 1px 5px rgba(162, 162, 163, 0.109);
+    -webkit-box-shadow: inset 1px 1px 5px #a2a2a31c;
+            box-shadow: inset 1px 1px 5px #a2a2a31c;
     background: #fafafa;
   }
   .container-sm .header .title {
@@ -253,7 +252,7 @@ body {
     width: 60%;
   }
   .container-sm .survey-body form .checkBoxArea {
-    width: 25%;
+    width: 30%;
   }
   .container-sm .survey-body form .checkBoxArea input {
     width: 50px;
@@ -269,14 +268,13 @@ body {
   }
   .container-sm .survey-body form input,
   .container-sm .survey-body form select {
-    color: grey;
+    color: #585861;
     border-radius: 10px;
     padding-left: 5px;
     border: 0;
-    outline: #5555b9;
     width: 100%;
-    -webkit-box-shadow: inset 10px 10px 10px rgba(128, 128, 128, 0.137);
-            box-shadow: inset 10px 10px 10px rgba(128, 128, 128, 0.137);
+    -webkit-box-shadow: inset 10px 10px 10px #80808023;
+            box-shadow: inset 10px 10px 10px #80808023;
   }
 }
 

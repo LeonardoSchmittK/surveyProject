@@ -15,8 +15,7 @@
 - [x] Use Google Fonts
 - [x] Use icons from Font Awesome
 - [x] Add animations
-- [] Code review for a prettier code
+- [x] Code review for a prettier code
 - [] Using Git, add it to GitHub.
-
 
 *made with* :purple_heart:
