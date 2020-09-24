@@ -16,6 +16,6 @@
 - [x] Use icons from Font Awesome
 - [x] Add animations
 - [x] Code review for a prettier code
-- [] Using Git, add it to GitHub.
+- [x] Using Git, add it to GitHub.
 
 *made with* :purple_heart:
